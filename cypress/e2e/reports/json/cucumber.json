@@ -1,0 +1,50 @@
+[
+  {
+    "description": "As a seeker of information\nI want to be able to open Google search\nSo that I can find stuff",
+    "elements": [
+      {
+        "description": "",
+        "id": "open-google-search-page;open-google-search",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Open google Search",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I navigate to Google homepage",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4026000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I can access a search input",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "open-google-search-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Open Google search page",
+    "tags": [],
+    "uri": "cypress\\e2e\\cucumber\\features\\google.feature"
+  }
+]
