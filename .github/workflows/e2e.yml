@@ -2,10 +2,15 @@ name: End to end test
 
 permissions:
   id-token: write
+  pages: write
   contents: read
 
 on:
   workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   cypress-e2e:
@@ -25,7 +30,21 @@ jobs:
       - name: Generate multi report
         run: npm run cucumber:multi-report
       - name: Create report artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: cucumber-reports
           path: cypress/e2e/reports/html
+  
+  deploy-reports:
+    needs: cypress-e2e
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+      steps:
+        - name: Deploy report to GitHub Pages
+          id: deployment
+          uses: action/deploy-pages@4
+          
+
