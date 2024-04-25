@@ -30,7 +30,7 @@ jobs:
       - name: Generate multi report
         run: npm run cucumber:multi-report
       - name: Setup pages
-        uses: actions/configure-pages@3
+        uses: actions/configure-pages@v3
       - name: Create report artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -46,6 +46,6 @@ jobs:
     steps:
       - name: Deploy report to GitHub Pages
         id: deployment
-        uses: action/deploy-pages@4
+        uses: action/deploy-pages@v4
 
 
