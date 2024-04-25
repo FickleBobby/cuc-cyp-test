@@ -37,13 +37,12 @@ jobs:
           path: cypress/e2e/reports/html
   
   deploy-reports:
-    needs: cypress-e2e
-    runs-on: ubuntu-latest
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+    needs: cypress-e2e
+    runs-on: ubuntu-latest
       steps:
         - name: Deploy report to GitHub Pages
           id: deployment
