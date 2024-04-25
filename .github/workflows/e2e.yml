@@ -43,9 +43,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: cypress-e2e
     runs-on: ubuntu-latest
-      steps:
-        - name: Deploy report to GitHub Pages
-          id: deployment
-          uses: action/deploy-pages@4
+    steps:
+      - name: Deploy report to GitHub Pages
+        id: deployment
+        uses: action/deploy-pages@4
 
 
