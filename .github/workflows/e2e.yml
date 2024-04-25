@@ -29,6 +29,8 @@ jobs:
           browser: chrome
       - name: Generate multi report
         run: npm run cucumber:multi-report
+      - name: Setup pages
+        uses: actions/configure-pages@5
       - name: Create report artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -46,5 +48,5 @@ jobs:
         - name: Deploy report to GitHub Pages
           id: deployment
           uses: action/deploy-pages@4
-          
+
 
