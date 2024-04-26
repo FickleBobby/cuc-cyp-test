@@ -35,7 +35,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: cypress/e2e/reports/html
-          name: reports
   
   deploy-reports:
 
