@@ -36,16 +36,16 @@ jobs:
         with:
           path: cypress/e2e/reports/html
   
-  deploy-reports:
+  # deploy-reports:
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: cypress-e2e
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy report to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   needs: cypress-e2e
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy report to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
 
 
