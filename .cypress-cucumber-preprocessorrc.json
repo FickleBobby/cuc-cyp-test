@@ -13,7 +13,7 @@
   },
   "html": {
     "enabled": true,
-    "output": "./cypress/e2e/reports/html/index.html"
+    "output": "./cypress/e2e/reports/html/reports/index.html"
   },
   "filterSpecs": false
 }
