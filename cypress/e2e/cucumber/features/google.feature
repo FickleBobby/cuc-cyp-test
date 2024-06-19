@@ -1,4 +1,4 @@
-Feature: Open Google search page
+Feature: Open Google search page v2
 As a seeker of information
 I want to be able to open Google search
 So that I can find stuff
