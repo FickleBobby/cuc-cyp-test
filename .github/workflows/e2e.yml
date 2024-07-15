@@ -27,6 +27,11 @@ jobs:
         with:
           install: false
           browser: chrome
+  
+  generate-reports:
+    name: Generate E2E reports
+    runs-on: ubuntu-latest
+    steps:
       - name: Generate multi report
         run: npm run cucumber:multi-report
       - name: Setup pages
