@@ -6,3 +6,10 @@ When('I navigate to Google homepage', () => {
 Then('I can access a search input', () => {
   cy.get('textarea').should('not.exist');
 });
+
+AfterAll(() => {
+  cy.writeFile(
+    './cypress/e2e/reports/config/browserDetails.json',
+    Cypress.browser
+  );
+});
