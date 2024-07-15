@@ -31,8 +31,10 @@ jobs:
         if: always()
         run: npm run cucumber:multi-report
       - name: Setup pages
+        if: always()
         uses: actions/configure-pages@v3
       - name: Create report artifact
+        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: cypress/e2e/reports/html
