@@ -7,9 +7,9 @@ Then('I can access a search input', () => {
   cy.get('textarea').should('exist');
 });
 
-AfterAll(() => {
+BeforeAll(() => {
   cy.writeFile(
-    './cypress/e2e/reports/config/browserDetails.json',
+    '/browserDetails.json',
     Cypress.browser
   );
 });
