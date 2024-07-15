@@ -8,8 +8,12 @@ Then('I can access a search input', () => {
 });
 
 BeforeAll(() => {
+  cy.log('##############')
+  cy.log('# BEFORE All #')
+  cy.log('##############')
+  
   cy.writeFile(
-    '../../../../browserDetails.json',
+    '../../browserDetails.json',
     Cypress.browser
   );
 });
