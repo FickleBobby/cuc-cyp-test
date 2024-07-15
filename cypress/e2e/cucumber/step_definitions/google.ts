@@ -11,7 +11,8 @@ Before(() => {
  cy.log('##############');
   cy.log("BEFORE");
   cy.log('################');
-})
+});
+
 AfterAll(() => {
   cy.log('##############');
   cy.log('# After All #');
