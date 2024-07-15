@@ -30,6 +30,8 @@ jobs:
   
   generate-reports:
     name: Generate E2E reports
+    needs: cypress-e2e
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Generate multi report
@@ -42,6 +44,7 @@ jobs:
           path: cypress/e2e/reports/html
   
   deploy-reports:
+    needs: generate-reports
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
