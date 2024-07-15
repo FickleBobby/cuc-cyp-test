@@ -8,7 +8,7 @@ export default defineConfig({
   chromeWebSecurity: false,
   defaultCommandTimeout: 15000,
   retries: {
-    runMode: 3,
+    runMode: 0,
     openMode: 0
   },
   e2e: {
