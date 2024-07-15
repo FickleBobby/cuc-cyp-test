@@ -16,7 +16,7 @@ function getBrowserDetails() {
     return JSON.parse(fs.readFileSync("./browserDetails.json", "utf-8"));
 }
 //const browserDetails = getBrowserDetails();
-console.log(fileList('./cypress'))
+console.log(fileList('./cypress/e2e'))
 report.generate({
     jsonDir: "./cypress/e2e/reports/json",  // ** Path of .json file **//
     reportPath: "./cypress/e2e/reports/html/reports/multi",
