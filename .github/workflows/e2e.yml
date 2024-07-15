@@ -48,7 +48,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: cypress-e2e
     runs-on: ubuntu-latest
     steps:
       - name: Deploy report to GitHub Pages
