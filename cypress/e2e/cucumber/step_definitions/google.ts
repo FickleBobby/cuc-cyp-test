@@ -7,10 +7,15 @@ Then('I can access a search input', () => {
   cy.get('textarea').should('exist');
 });
 
+Before(() => {
+ cy.log('##############');
+  cy.log("BEFORE");
+  cy.log('################');
+})
 AfterAll(() => {
-  cy.log('##############')
-  cy.log('# After All #')
-  cy.log('##############')
+  cy.log('##############');
+  cy.log('# After All #');
+  cy.log('##############');
   
   cy.writeFile(
     '../../browserDetails.json',
