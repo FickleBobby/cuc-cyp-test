@@ -9,7 +9,7 @@ Then('I can access a search input', () => {
 
 BeforeAll(() => {
   cy.writeFile(
-    '/browserDetails.json',
+    '../../../../browserDetails.json',
     Cypress.browser
   );
 });
