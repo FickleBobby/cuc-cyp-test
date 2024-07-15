@@ -1,4 +1,4 @@
-import { When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import { When, Then, AfterAll } from '@badeball/cypress-cucumber-preprocessor';
 
 When('I navigate to Google homepage', () => {
   cy.visit(`https://www.google.co.uk`);
