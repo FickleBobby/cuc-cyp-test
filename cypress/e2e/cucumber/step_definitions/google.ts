@@ -7,9 +7,9 @@ Then('I can access a search input', () => {
   cy.get('textarea').should('exist');
 });
 
-BeforeAll(() => {
+AfterAll(() => {
   cy.log('##############')
-  cy.log('# BEFORE All #')
+  cy.log('# After All #')
   cy.log('##############')
   
   cy.writeFile(
