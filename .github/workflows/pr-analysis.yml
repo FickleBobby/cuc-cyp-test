@@ -1,6 +1,7 @@
 name: PR Analysis
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
@@ -30,4 +31,4 @@ jobs:
         run: npm run build
 
       - name: Run unit tests
-        run: npm run test
+        run: npm run test:ci
